@@ -1,1 +1,1 @@
-worker: /bin/sh run.sh
+worker: /bin/sh run.sh heroku

@@ -20,9 +20,9 @@
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
           <collectionProp name="Arguments.arguments"/>
         </elementProp>
-        <stringProp name="HTTPSampler.domain">${__P(HOST,)}</stringProp>
-        <stringProp name="HTTPSampler.protocol">${__P(PROTOCOL,)}</stringProp>
-        <stringProp name="HTTPSampler.path">${__P(ROUTE,)}</stringProp>
+        <stringProp name="HTTPSampler.domain">${__P(JMETER_HOST,)}</stringProp>
+        <stringProp name="HTTPSampler.protocol">${__P(JMETER_PROTOCOL,)}</stringProp>
+        <stringProp name="HTTPSampler.path">${__P(JMETER_ROUTE,)}</stringProp>
       </ConfigTestElement>
       <hashTree/>
       <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
@@ -41,9 +41,9 @@
       <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
         <collectionProp name="AuthManager.auth_list">
           <elementProp name="" elementType="Authorization">
-            <stringProp name="Authorization.url">${__P(AUTH_URL,)}</stringProp>
-            <stringProp name="Authorization.username">${__P(USERNAME,)}</stringProp>
-            <stringProp name="Authorization.password">${__P(PASSWORD,)}</stringProp>
+            <stringProp name="Authorization.url">${__P(JMETER_AUTH_URL,)}</stringProp>
+            <stringProp name="Authorization.username">${__P(JMETER_USERNAME,)}</stringProp>
+            <stringProp name="Authorization.password">${__P(JMETER_PASSWORD,)}</stringProp>
             <stringProp name="Authorization.domain"></stringProp>
             <stringProp name="Authorization.realm"></stringProp>
           </elementProp>
@@ -63,11 +63,11 @@
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="User" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <stringProp name="LoopController.loops">${__P(ITERATIONS,)}</stringProp>
+          <stringProp name="LoopController.loops">${__P(JMETER_ITERATIONS,)}</stringProp>
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">${__P(USERS,)}</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">${__P(RAMP_UP,)}</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(JMETER_USERS,)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(JMETER_RAMP_UP,)}</stringProp>
         <boolProp name="ThreadGroup.delayedStart">false</boolProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
@@ -82,7 +82,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-   &quot;chat_id&quot;: &quot;${__P(CHAT_ID,)}-${counter}&quot;,&#xd;
+   &quot;chat_id&quot;: &quot;${__P(JMETER_CHAT_ID,)}-${counter}&quot;,&#xd;
    &quot;user_query&quot;: &quot;How can I register a trademark?&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -109,7 +109,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-   &quot;chat_id&quot;: &quot;${__P(CHAT_ID,)}-${counter}&quot;,&#xd;
+   &quot;chat_id&quot;: &quot;${__P(JMETER_CHAT_ID,)}-${counter}&quot;,&#xd;
    &quot;user_query&quot;: &quot;How long does it take?&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -136,7 +136,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-   &quot;chat_id&quot;: &quot;${__P(CHAT_ID,)}-${counter}&quot;,&#xd;
+   &quot;chat_id&quot;: &quot;${__P(JMETER_CHAT_ID,)}-${counter}&quot;,&#xd;
    &quot;user_query&quot;: &quot;What if someone objects?&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
