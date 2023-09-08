@@ -82,7 +82,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-   &quot;chat_id&quot;: &quot;123456789-${counter}&quot;,&#xd;
+   &quot;chat_id&quot;: &quot;${__P(CHAT_ID,)}-${counter}&quot;,&#xd;
    &quot;user_query&quot;: &quot;How can I register a trademark?&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -109,7 +109,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-   &quot;chat_id&quot;: &quot;123456789-${counter}&quot;,&#xd;
+   &quot;chat_id&quot;: &quot;${__P(CHAT_ID,)}-${counter}&quot;,&#xd;
    &quot;user_query&quot;: &quot;How long does it take?&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -136,7 +136,7 @@
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-   &quot;chat_id&quot;: &quot;123456789-${counter}&quot;,&#xd;
+   &quot;chat_id&quot;: &quot;${__P(CHAT_ID,)}-${counter}&quot;,&#xd;
    &quot;user_query&quot;: &quot;What if someone objects?&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
