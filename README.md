@@ -43,19 +43,7 @@ Shell script
 You will need to export the above env vars before running the shell script like so `export JMETER_PROTOCOL=https`
 
 ```shell
-sh run.sh [chat_id]
-```
-
-Ruby convenience script
-
-```shell
 ruby run.rb
-```
-
-### Using Heroku local
-
-```shell
-heroku local
 ```
 
 ## Interpreting Results

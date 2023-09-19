@@ -1,13 +1,10 @@
 #! /bin/sh
 
-rm -f jmeter.log
-
 if [ -z "$1" ]; then
   echo "Please enter a chat_id, e.g. sh run.sh 123456789"
   exit 1
 else
-  chat_id="load_test-${1}-${JMETER_PLAN}-${JMETER_USERS}-${JMETER_RAMP_UP}-${JMETER_ITERATIONS}"
-  rm -rf results-${chat_id}
+  chat_id="load-test-${1}"
 
   jmeter -JJMETER_PROTOCOL=${JMETER_PROTOCOL} \
          -JJMETER_HOST=${JMETER_HOST} \
@@ -19,6 +16,6 @@ else
          -JJMETER_USERS=${JMETER_USERS} \
          -JJMETER_RAMP_UP=${JMETER_RAMP_UP} \
          -JJMETER_ITERATIONS=${JMETER_ITERATIONS} \
-         -JJMETER_CHAT_ID=${chat_id} \
-         -n -t plan.jmx -l results-${chat_id}/results.log -e -o results-${chat_id}
+         -JJMETER_CHAT_ID=${1} \
+         -n -t plan.jmx -l ${chat_id}/results.log -e -o ${chat_id}
 fi

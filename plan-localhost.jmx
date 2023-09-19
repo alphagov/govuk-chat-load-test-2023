@@ -20,8 +20,9 @@
         <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
           <collectionProp name="Arguments.arguments"/>
         </elementProp>
-        <stringProp name="HTTPSampler.domain">${__P(JMETER_HOST,)}</stringProp>
-        <stringProp name="HTTPSampler.protocol">${__P(JMETER_PROTOCOL,)}</stringProp>
+        <stringProp name="HTTPSampler.domain">127.0.0.1</stringProp>
+        <stringProp name="HTTPSampler.port">8000</stringProp>
+        <stringProp name="HTTPSampler.protocol">http</stringProp>
         <stringProp name="HTTPSampler.path">${__P(JMETER_ROUTE,)}</stringProp>
       </ConfigTestElement>
       <hashTree/>
@@ -41,9 +42,9 @@
       <AuthManager guiclass="AuthPanel" testclass="AuthManager" testname="HTTP Authorization Manager" enabled="true">
         <collectionProp name="AuthManager.auth_list">
           <elementProp name="" elementType="Authorization">
-            <stringProp name="Authorization.url">${__P(JMETER_AUTH_URL,)}</stringProp>
-            <stringProp name="Authorization.username">${__P(JMETER_USERNAME,)}</stringProp>
-            <stringProp name="Authorization.password">${__P(JMETER_PASSWORD,)}</stringProp>
+            <stringProp name="Authorization.url">http://127.0.0.1:8000</stringProp>
+            <stringProp name="Authorization.username">username</stringProp>
+            <stringProp name="Authorization.password">password</stringProp>
             <stringProp name="Authorization.domain"></stringProp>
             <stringProp name="Authorization.realm"></stringProp>
           </elementProp>

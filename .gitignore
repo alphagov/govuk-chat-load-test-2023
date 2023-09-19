@@ -1,4 +1,4 @@
-results-*/
+load-test-*/
 *.log
 .env
 temp
