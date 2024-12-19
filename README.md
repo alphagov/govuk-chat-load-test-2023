@@ -1,4 +1,7 @@
-# GOV.UK Chat Load Test
+# GOV.UK Chat Load Test 
+
+**Archived** - This project was written in 2023 for load testing a GOV.UK Chat prototype and is not used further.
+
 The GOV.UK Chat Load Test is a tool that allows us to load test the application using Apache JMeter.
 
 ## Getting started
@@ -63,3 +66,7 @@ This displays the overall concurrency levels duing the test, helpful for identif
 
 ### Response Times:
 This category focuses on the detailed response times, helping to pinpoint specific performance-related problems.
+
+## Licence
+
+[MIT License](LICENCE)
